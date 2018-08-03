@@ -7,6 +7,7 @@ import cv2
 import dlib
 import numpy as np
 import FaceAligner
+import align_dlib
 from PIL import Image
 from PIL import ImageTk
 
@@ -104,7 +105,8 @@ def startDetection(fileName):
 
 	#rects = detector.detectMultiScale(gray, scaleFactor=1.05, minNeighbors=10, minSize=(75, 75))
 	predictor = dlib.shape_predictor(shape_predictor)
-	fa = FaceAligner.FaceAligner(predictor, desiredFaceWidth=96)
+	##fa = FaceAligner.FaceAligner(predictor, desiredFaceWidth=96)
+	fa = align_dlib.AlignDlib(shape_predictor)
 
 	# loop over the face detections
 
@@ -132,7 +134,10 @@ def startDetection(fileName):
 	    # and draw them on the image
 
 	    # Face Normalization   
-	    faceAligned = fa.align(image, gray, rect)
+	    ##faceAligned = fa.align(image, gray, rect)
+	    faceAligned = fa.align(96, image)
+	    if faceAligned is None:
+		continue
 	    height, width, channels = faceAligned.shape 
 	    print("aligned width,height=" , width,height)
 	    faceAligned_return = cv2.cvtColor(faceAligned, cv2.COLOR_BGR2RGB)

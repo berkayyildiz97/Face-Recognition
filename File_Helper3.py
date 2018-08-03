@@ -13,7 +13,7 @@ from Tkinter import *
 root = Tk()
 
 net = TorchNeuralNet()
-Database_helper.setDatabase('Lfw_Database3.db')
+Database_helper.setDatabase('Lfw_Database4.db')
 for root, directories, filenames in os.walk('/home/berkay/FaceRecog2/lfw'):
 	for filename in filenames:
 		print "filename:",filename

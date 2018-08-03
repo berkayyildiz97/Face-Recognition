@@ -73,6 +73,7 @@ def clickedImage():
 	(original,aligned,detectedImage,faceAligned_RGB) = face_gui.startDetection(fileName)
 	print("File name: ",fileName)
 
+	print("Filename",fileName)
 	# if the panels are None, initialize them
 	if panelA is None or panelB is None:	
 		
@@ -176,17 +177,5 @@ recognizeButton.pack( side = RIGHT)
 window.geometry('500x500')
 window.title("Face Recognition")
 window.mainloop()
-
-def shape_to_np(shape, dtype="int"):
-	# initialize the list of (x, y)-coordinates
-	coords = np.zeros((shape.num_parts, 2), dtype=dtype)
-
-	# loop over all facial landmarks and convert them
-	# to a 2-tuple of (x, y)-coordinates
-	for i in range(0, shape.num_parts):
-		coords[i] = (shape.part(i).x, shape.part(i).y)
-
-	# return the list of (x, y)-coordinates
-	return coords
 
 

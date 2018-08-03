@@ -49,6 +49,11 @@ matched error97 792
 matched error98 752
 matched error99 698
 matched error100 664
+matched error105 508
+matched error110 360
+matched error115 244
+matched error120 160
+matched error1242 105
 Mismatched error60 18
 Mismatched error65 42
 Mismatched error70 79
@@ -62,6 +67,11 @@ Mismatched error97 865
 Mismatched error98 916
 Mismatched error99 958
 Mismatched error100 1006
+Mmatched error105 1256
+Mmatched error110 1491
+Mmatched error115 1751
+Mmatched error120 2014
+Mmatched error1242 2180
 Accuracy for 0.60:  56.5333333333
 Accuracy for 0.65:  59.5166666667
 Accuracy for 0.70:  62.65
@@ -74,6 +84,11 @@ Accuracy for 0.96:  72.4833333333
 Accuracy for 0.97:  72.3833333333
 Accuracy for 0.98:  72.2
 Accuracy for 0.99:  72.4
-Accuracy for 1.00:  72.1666666667s
+Accuracy for 1.00:  72.1666666667
+Accuracy for 1.05:  70.6
+Accuracy for 1.10:  69.15
+Accuracy for 1.15:  66.75
+Accuracy for 1.20:  63.7666666667
+Accuracy for 1.242:  61.9166666667
 '''
 
